@@ -51,7 +51,10 @@
 .comment{
     margin-top: 20px;
 }
-
+.btn-comment-push{
+    float: right;
+    margin: 10px 0 10px 0;
+}
 footer{
     position: relative;
     text-align: center;

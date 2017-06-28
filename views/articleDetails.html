@@ -40,6 +40,10 @@
                     </li>
                 </ul>
             </div>
+            <form class="push-comment">
+                <textarea  class="form-control" rows="3" placeholder="在这里评论文章" ng-model="commentTextArea"></textarea>
+                <button class="btn btn-success btn-comment-push" ng-click="pushComment()">发表评论</button>
+            </form>
         </div>
         <div class="col-md-4" ui-view="aside">
 
