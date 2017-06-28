@@ -1,51 +1,10 @@
 <div class="container-fluid main">
     <div class="row main-content">
-        <div class="col-md-8">
-            <article>
-                <header class="entry-header">
-                    <div class="entry-meta">
-                        <span>发布于</span>
-                        <a href="article.html"> <time>2017年6月26日</time></a>
-                    </div>
-                    <h2 class="entry-title">
-                        <a href="article.html"> 世界你好！</a>
-                    </h2>
-                </header>
-                <div class="entry-content">
-                    <p>欢迎使用WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！</p>
-                </div>
-            </article>
-        </div>
-        <div class="col-md-4">
-            <aside>
-                <section class="widget">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="搜索...">
-                            <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
-                        </div>
-                    </div>
-                </section>
-                <section class="recent-posts widget" >
-                    <h3 class="widget-title">近期文章</h3>
-                    <ul>
-                        <li> 世界你好！</li>
-                    </ul>
+        <div class="col-md-8" ui-view="articleList">
 
-                </section>
-                <section class="recent-comments widget">
-                    <h3 class="widget-title">近期评论</h3>
-                    <ul>
-                        <li> 写的不错~~</li>
-                    </ul>
-                </section>
-                <section class="recent-archives widget" >
-                    <h3 class="widget-title">近期归档</h3>
-                    <ul>
-                        <li> 2017年6月</li>
-                    </ul>
-                </section>
-            </aside>
+        </div>
+        <div class="col-md-4" ui-view="homeAside">
+
         </div>
     </div>
 </div>

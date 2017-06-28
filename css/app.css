@@ -1,3 +1,6 @@
+.custom-header{
+    padding: 0px;
+}
 .custom-header img{
     padding: 0px;
     position: fixed;
@@ -6,7 +9,6 @@
 }
 .custom-header{
     background-color: transparent;
-    height: 600px;
 }
 
 .custom-header .site-branding{
@@ -17,11 +19,17 @@
 }
 
 
-
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 .main{
     position: relative;
     background-color: white;
     padding-bottom: 60px;
+    padding-top: 30px;
 }
 
 .main-content{

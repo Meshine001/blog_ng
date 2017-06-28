@@ -1,0 +1,16 @@
+<div ng-controller="ArticleListCtrl">
+    <article ng-repeat="article in articles">
+        <header class="entry-header">
+            <div class="entry-meta">
+                <span>发布于</span>
+                <a href="article.html"> <time ng-bind="article.publishTime"></time></a>
+            </div>
+            <h2 class="entry-title">
+                <a href="article.html" ng-bind="article.title"></a>
+            </h2>
+        </header>
+        <div class="entry-content">
+            <p ng-bind="article.summary"></p>
+        </div>
+    </article>
+</div>
