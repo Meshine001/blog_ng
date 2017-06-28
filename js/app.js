@@ -1,7 +1,7 @@
 /**
  * Created by Ming on 2017/6/27.
  */
-var routerApp = angular.module('routerApp', ['ui.router', 'ArticleListMoudle']);
+var routerApp = angular.module('routerApp', ['ui.router', 'ArticleListMoudle','ArticleDetailsMoudle']);
 /**
  * 由于整个应用都会和路由打交道，所以这里把$state和$stateParams这两个对象放到$rootScope上，方便其它地方引用和注入。
  * 这里的run方法只会在angular启动的时候运行一次。
@@ -35,13 +35,23 @@ routerApp.config(function ($stateProvider, $urlRouterProvider) {
                 'articleList@index':{
                     templateUrl:'views/articleList.html'
                 },
-                'homeAside@index':{
-                    templateUrl:'views/homeAside.html'
+                'aside@index':{
+                    templateUrl:'views/aside.html'
                 }
             }
         })
         .state('details',{
             url:'/details/:articleId',
-            templateUrl:'views/details.html'
+            views:{
+                '':{
+                    templateUrl:'views/articleDetails.html'
+                },
+                'aside@details':{
+                    templateUrl:'views/aside.html'
+                }
+
+            }
+
+
         });
 });

@@ -1,0 +1,48 @@
+<div class="jumbotron custom-header" style="height: 60px;">
+    <img src="img/header.jpg">
+    <div class="site-branding" style="margin-top: 40px;">
+        <h2>胡亚茹的博客</h2>
+    </div>
+</div>
+<div class="container-fluid main">
+    <div class="row main-content">
+        <div class="col-md-7" ng-controller="ArticleDetailsCtrl">
+            <article>
+                <header class="entry-header">
+                    <div class="entry-meta">
+                        <span>发布于</span>
+                        <time ng-bind="article.publishTime"></time>
+                    </div>
+                    <h2 class="entry-title" ng-bind="article.title">
+
+                    </h2>
+                </header>
+                <div class="entry-content">
+                    <p ng-bind="article.content"></p>
+                </div>
+            </article>
+            <div class="comments-area">
+                <h3 class="comment-entry-title">{{comment.article}}<span class="small">的回复</span></h3>
+                <ul class="media-list">
+                    <li class="comment" ng-repeat="c in comment.comments">
+                        <div class="media">
+                            <div class="media-left">
+                                <a >
+                                <img src="img/{{c.avatar}}" width="50" height="50">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{c.nick}}<br>
+                                    <time>{{c.time}}</time></h4>
+                                <span>{{c.content}}</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4" ui-view="aside">
+
+        </div>
+    </div>
+</div>
